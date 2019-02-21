@@ -9,3 +9,17 @@ $('span').on('click', function(e) {
 	});
 	e.stopPropagation();
 });
+//write a new Todo
+$('input[type="text"').keypress(function(e) {
+	if (e.which === 13) {
+		//grab new Todo text from input
+		var todoText = $(this).val();
+		//earse input field
+		$(this).val('');
+		//create new li and add to ul
+		if(todoText){
+			$('ul').append('<li>'+todoText+'</li>');
+		}
+		
+	}
+});
