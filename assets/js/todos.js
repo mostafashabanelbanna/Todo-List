@@ -18,7 +18,11 @@ $('input[type="text"').keypress(function(e) {
 		$(this).val('');
 		//create new li and add to ul
 		if(todoText){
-			$('ul').append('<li><span><i class="fa fa-trash">X</i></span> '+todoText+'</li>');
+			$('ul').append('<li><span><i class="fa fa-trash"></i></span> '+todoText+'</li>');
 		}
 	}
+});
+//show and hide input field
+$('.fa-plus').on('click', function() {
+	$('input[type="text"').fadeToggle();
 });
